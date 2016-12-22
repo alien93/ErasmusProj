@@ -2,11 +2,60 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#"
      xml:base="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:erasmus="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus"/>
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasCourseUnitInformation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasCourseUnitInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasDegreeProgrammeInformation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasDegreeProgrammeInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasGeneralInformationForStudents -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasGeneralInformationForStudents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasInstitutionDescription -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#hasInstitutionDescription">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -36,7 +85,7 @@ Object.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#offeredAt">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunityInstance"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunityProvider"/>
         <rdfs:comment>This can be used to represent franchises or other circumstances when the provider that offers
 the instance is different to the provider that defines the specification. Content should be a URI
 conforming to IETF\-RFC2396.</rdfs:comment>
@@ -49,6 +98,8 @@ conforming to IETF\-RFC2396.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#offers">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunitySpecification"/>
         <rdfs:comment>A relation to a Learning Opportunity Specification offered by the Learning Opportunity Provider.</rdfs:comment>
         <rdfs:label>Offers</rdfs:label>
     </owl:ObjectProperty>
@@ -59,6 +110,8 @@ conforming to IETF\-RFC2396.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#specifies">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunityInstance"/>
         <rdfs:comment>A relation to a Learning Opportunity Instance that is an instance specified by the Learning
 Opportunity Specification.</rdfs:comment>
         <rdfs:label>Specifies</rdfs:label>
@@ -264,6 +317,40 @@ EN14142\-1 and GEO\-RSS.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#CourseUnitInstance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#CourseUnitInstance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunityInstance"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#DegreeProgrammeInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#CourseUnitSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#CourseUnitSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunitySpecification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#DegreeProgrammeSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#DegreeProgrammeInstance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#DegreeProgrammeInstance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunityInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#DegreeProgrammeSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#DegreeProgrammeSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus#LearningOpportunitySpecification"/>
+    </owl:Class>
     
 
 
