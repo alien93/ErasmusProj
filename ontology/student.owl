@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ftn.uns.ac.rs/student.owl#"
+     xml:base="http://www.ftn.uns.ac.rs/student.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.ftn.uns.ac.rs/student.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#applyToProgram -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#applyToProgram">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#applyToUniversity -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#applyToUniversity">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hasDiploma -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasDiploma">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Diploma"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hasID -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasID">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hasLanguageProficiency -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasLanguageProficiency">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#LanguageProficiency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hasMarks -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasMarks">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Marks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hasMotivationLetter -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasMotivationLetter">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#MotivationLetter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hasRecommendationLetter -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasRecommendationLetter">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#RecommendationLetter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#hesResidenceCertificate -->
+
+    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hesResidenceCertificate">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ResidenceCertificate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#address">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#citizenship -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#citizenship">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#city">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#country_of_birth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#country_of_birth">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#date_of_birth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#date_of_birth">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#email">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#expiring_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#expiring_date">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#first_name">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#gender">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#issue_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#issue_date">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Diploma"/>
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#issued_by -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#issued_by">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#last_name">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#mobile_phone_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#mobile_phone_number">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#number">
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
+        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#telephone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#telephone">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#zip_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#zip_code">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#Diploma -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Diploma">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#Document -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#ID -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#ID">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#LanguageProficiency -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#LanguageProficiency">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#Marks -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Marks">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#MotivationLetter -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#MotivationLetter">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#Passport -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Passport">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#Program -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Program"/>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#RecommendationLetter -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#RecommendationLetter">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#ResidenceCertificate -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#ResidenceCertificate">
+        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#Student -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+    
+
+
+    <!-- http://www.ftn.uns.ac.rs/student.owl#University -->
+
+    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#University"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
