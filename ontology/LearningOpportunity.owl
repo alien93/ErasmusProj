@@ -11,7 +11,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1">
     <owl:Ontology rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/erasmus">
-        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+        <owl:imports rdf:resource="http://purl.org/dc/terms"/>
     </owl:Ontology>
     
 
