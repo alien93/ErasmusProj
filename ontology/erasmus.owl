@@ -113,11 +113,27 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
+        <rdfs:comment>Definition: A relation to a Learning Opportunity Object that is logically included in the Learning Opportunity
+Object.
+Comments: This can be used to represent part-whole relations, such as the relationship between
+organisations and departments, or between programmes and constituent units. Content should be
+a URI conforming to IETF\-RFC2396. Attention is drawn to the property
+http://purl.org/dc/terms/hasPart as defined by DCMI\-TERMS as an equivalent property.</rdfs:comment>
+        <rdfs:label>Has part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -125,8 +141,14 @@
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#offeredAt -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#offeredAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:comment>Definition: A relation to a Learning Opportunity Provider that offers the Learning Opportunity Instance.
+Comments: This can be used to represent franchises or other circumstances when the provider that offers
+the instance is different to the provider that defines the specification. Content should be a URI
+conforming to IETF\-RFC2396.</rdfs:comment>
+        <rdfs:label>Offered At</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -134,8 +156,12 @@
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#offers -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#offers">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:comment>Definition: A relation to a Learning Opportunity Specification offered by the Learning Opportunity Provider.
+Comments: Content should be a URI conforming to IETF\-RFC2396.</rdfs:comment>
+        <rdfs:label>Offers</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -143,8 +169,13 @@
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#specifies -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#specifies">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:comment>Definition: A relation to a Learning Opportunity Instance that is an instance specified by the Learning
+Opportunity Specification.
+Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
+        <rdfs:label>Specifies</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -380,7 +411,11 @@ Comments: Typically the web page of the provider or course.</rdfs:comment>
 
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject -->
 
-    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject">
+        <rdfs:comment>Definition: An abstract resource used within the context of learning opportunities.
+Comments:</rdfs:comment>
+        <rdfs:label>Learning Opportunity Object</rdfs:label>
+    </owl:Class>
     
 
 
@@ -388,6 +423,9 @@ Comments: Typically the web page of the provider or course.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider">
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
+        <rdfs:comment>Definition: An agent (person or organisation) that provides learning opportunities.
+Comments:</rdfs:comment>
+        <rdfs:label>Learning Opportunity Provider</rdfs:label>
     </owl:Class>
     
 
@@ -396,6 +434,10 @@ Comments: Typically the web page of the provider or course.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification">
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
+        <rdfs:comment>Definition: An abstract description of a learning opportunity, consisting of information that will be
+consistent across multiple instances of the learning opportunity.
+Comments:</rdfs:comment>
+        <rdfs:label>Learning Opportunity Specification</rdfs:label>
     </owl:Class>
     
 
@@ -552,6 +594,33 @@ Comments: Typically the web page of the provider or course.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance">
+        <rdfs:comment>Learning Opportunity Instance</rdfs:comment>
+        <rdfs:comment>Definition: A single occurrence of a learning opportunity. Unlike a Learning Opportunity Specification, a
+Learning Opportunity Instance is not abstract, may be bound to particular dates or locations, and
+may be applied for or participated in by learners.
+Comments:</rdfs:comment>
+        <rdfs:label>Learning Opportunity Instance</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
