@@ -90,6 +90,22 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <rdfs:Datatype rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
@@ -113,10 +129,20 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance -->
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#hasCredit -->
 
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance">
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#hasCredit">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:comment>No. of credits achieved after taking the course.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#hasLocation">
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
     </owl:ObjectProperty>
     
 
@@ -124,7 +150,6 @@
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#hasPart">
-        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityObject"/>
         <rdfs:comment>Definition: A relation to a Learning Opportunity Object that is logically included in the Learning Opportunity
@@ -138,10 +163,26 @@ http://purl.org/dc/terms/hasPart as defined by DCMI\-TERMS as an equivalent prop
     
 
 
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#hasQualification -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#hasQualification">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:comment>Qualifications achieved after completing the learning opportunity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#level -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#level">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#offeredAt -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#offeredAt">
-        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
         <rdfs:comment>Definition: A relation to a Learning Opportunity Provider that offers the Learning Opportunity Instance.
@@ -156,7 +197,6 @@ conforming to IETF\-RFC2396.</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#offers -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#offers">
-        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
         <rdfs:comment>Definition: A relation to a Learning Opportunity Specification offered by the Learning Opportunity Provider.
@@ -169,7 +209,6 @@ Comments: Content should be a URI conforming to IETF\-RFC2396.</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#specifies -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#specifies">
-        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
         <rdfs:comment>Definition: A relation to a Learning Opportunity Instance that is an instance specified by the Learning
@@ -193,16 +232,7 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
 
     <!-- http://purl.org/dc/elements/1.1/contributor -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
-        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en">Contributor</rdfs:label>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
     
 
 
@@ -232,6 +262,337 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:label xml:lang="en">Description</rdfs:label>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/type">
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitAssessmentMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitAssessmentMethods">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#assessment"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Represents knowledge evaluation methods used in course.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitCode">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitContent">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#level"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitNumberOfClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitNumberOfClasses">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitRecommendedReading -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitRecommendedReading">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitTeachingMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitTeachingMethods">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitTermPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitTermPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#engagement"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Information about course organisation (semester, trimester).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitYearOfStudy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitYearOfStudy">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#level"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeIdentifier"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreePrigrammeGeneralInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreePrigrammeGeneralInformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeAccessToFurtherStudies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeAccessToFurtherStudies">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeCurriculum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeCurriculum">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Represents description of mandatory and optional subjects and modules.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeEducationAndProfessionalGoals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeEducationAndProfessionalGoals">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeExaminationAssessmentRegulations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeExaminationAssessmentRegulations">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#assessment"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeFinalExamination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeFinalExamination">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#assessment"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeNumberOfStudents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeNumberOfStudents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeScientificDiscipline -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeScientificDiscipline">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeScientificField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeScientificField">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeStructureDiagram -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeStructureDiagram">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Diagram representation of programme structure information. It shows no. of ECTS credits per subject.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeStudiesType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeStudiesType">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeTHesisOutcome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeTHesisOutcome">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeThesisContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeThesisContent">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeThesisMentor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeThesisMentor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeThesisMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeThesisMethods">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DepartmentalEctsCoordinator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DepartmentalEctsCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
 
@@ -468,7 +829,9 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
 
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionIdentifier"/>
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -486,9 +849,28 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionName">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionStatus">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -497,6 +879,69 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#InstitutionalEctsCoordinator">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#Lecturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#Lecturer">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeContent">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeMentor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeMentor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeNumberOfClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeNumberOfClasses">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeOutcome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeOutcome">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeTeachingMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#ProfessionalPracticeTeachingMethods">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
     </owl:DatatypeProperty>
     
 
@@ -585,12 +1030,6 @@ Comments: Attention is drawn to ISO\-639.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#level">
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Definition: An account of the education level of the Learning Opportunity.
-Comments: Level will typically indicate the intended outcome of the Learning Opportunity in terms of
-progression; contrast this with the Prerequisite property. Attention is drawn to
-http://purl.org/dc/terms/educationLevel as defined in DCMI\-TERMS as a similar, though not
-equivalent term.</rdfs:comment>
-        <rdfs:label>Level</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -718,6 +1157,38 @@ Comments: Typically the web page of the provider or course.</rdfs:comment>
     
 
 
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInstance -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitInstance">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitSpecification -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#CourseUnitSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInstance -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeInstance">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeSpecification -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#DegreeProgrammeSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance -->
 
     <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance">
@@ -802,16 +1273,6 @@ Comments:</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
-        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <rdfs:label xml:lang="en">Identifier</rdfs:label>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
@@ -863,42 +1324,13 @@ Comments:</rdfs:comment>
         <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
         <rdfs:label xml:lang="en">Source</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
-        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <rdfs:label xml:lang="en">Subject</rdfs:label>
-        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-        <rdfs:label xml:lang="en">Title</rdfs:label>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
-        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
-        <rdfs:label xml:lang="en">Type</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance">
-        <rdfs:comment>Learning Opportunity Instance</rdfs:comment>
-        <rdfs:label>Learning Opportunity Instance</rdfs:label>
-        <rdfs:comment>Definition: A single occurrence of a learning opportunity. Unlike a Learning Opportunity Specification, a
-Learning Opportunity Instance is not abstract, may be bound to particular dates or locations, and
-may be applied for or participated in by learners.
-Comments:</rdfs:comment>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#level">
+        <rdfs:comment>Definition: An account of the education level of the Learning Opportunity.
+Comments: Level will typically indicate the intended outcome of the Learning Opportunity in terms of
+progression; contrast this with the Prerequisite property. Attention is drawn to
+http://purl.org/dc/terms/educationLevel as defined in DCMI\-TERMS as a similar, though not
+equivalent term.</rdfs:comment>
+        <rdfs:label>Level</rdfs:label>
     </rdf:Description>
     
 
