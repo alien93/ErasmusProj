@@ -232,7 +232,10 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnAccommodation -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnAccommodation">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Information about accomodation.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -240,7 +243,10 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnCostOfLiving -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnCostOfLiving">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Information about living expenses.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -256,7 +262,10 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnFacilitesForStudentsWithSpecialNeeds -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnFacilitesForStudentsWithSpecialNeeds">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Information on facilities for students with special needs.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -304,7 +313,10 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnMeals -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnMeals">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Information about meals.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -312,7 +324,10 @@ Comments: Content should be a URI conforming to IETF\-RFC2396</rdfs:comment>
     <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnMedicalFacilities -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#GeneralInformationOnMedicalFacilities">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Information on medical facilities in the city.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -617,6 +632,17 @@ ISO\-8601.</rdfs:comment>
 should conform to a URI IETF\-RFC2396.
 Comments: Typically the web page of the provider or course.</rdfs:comment>
         <rdfs:label>Url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl/GeneralInformationForStudents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>General information for students.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
