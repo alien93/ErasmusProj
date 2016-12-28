@@ -42,9 +42,9 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#hasPart -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasPart -->
 
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#hasPart">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasPart">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityObject"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityObject"/>
@@ -52,32 +52,32 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#offeredAt -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#offeredAt -->
 
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#offeredAt">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#offeredAt">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
-        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#offers -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#offers -->
 
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#offers">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#offers">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
-        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#specifies -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#specifies -->
 
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#specifies">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#specifies">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
-        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
     </owl:ObjectProperty>
     
 
@@ -153,7 +153,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Assessment">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -163,7 +163,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Cost">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -173,7 +173,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Credit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -183,7 +183,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Duration">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -193,7 +193,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Engagement">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -203,7 +203,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LanguageOfInstruction">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/language"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -213,7 +213,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Level">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -223,8 +223,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Location">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -234,7 +234,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Objective">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -244,7 +244,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Places">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -254,7 +254,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Prerequisite">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -264,7 +264,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Qualification">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
     
@@ -274,7 +274,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Start">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -300,25 +300,25 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance -->
 
-    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance">
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityObject"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider -->
 
-    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider">
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityObject"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification -->
 
-    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification">
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityObject"/>
     </owl:Class>
     
@@ -341,9 +341,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityInstance"/>
-            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunityProvider"/>
-            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1482491841.owl#LearningOpportunitySpecification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
