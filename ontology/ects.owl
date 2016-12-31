@@ -27,6 +27,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitAssessmentMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitAssessmentMethods">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitCode -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitCode">
@@ -67,6 +77,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommandedReading -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommandedReading">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTeachingMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTeachingMethods">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTitle -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTitle">
@@ -93,6 +123,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnutTermPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnutTermPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Engagement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -402,6 +442,16 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionMainUniversityRegulations">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#Lecturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#Lecturer">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:DatatypeProperty>
 </rdf:RDF>
