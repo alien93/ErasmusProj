@@ -13,6 +13,447 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects">
         <owl:imports rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitAssessmentMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitAssessmentMethods">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitCode">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitContent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Level"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommandedReading -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommandedReading">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTeachingMethods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTeachingMethods">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitYearOfStudy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitYearOfStudy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnutTermPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnutTermPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Engagement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeAccessToFurtherStudies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeAccessToFurtherStudies">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeEducationAndProfessionalGoals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeEducationAndProfessionalGoals">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeExaminationAndAssessmentRegulations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeExaminationAndAssessmentRegulations">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeFinalExamination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeFinalExamination">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeStructureDiagram -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeStructureDiagram">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInformation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DepartmentalEctsCoordinator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DepartmentalEctsCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForMobileStudents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForMobileStudents">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnAccommodation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnAccommodation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnCostOfLiving -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnCostOfLiving">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnExtraMuralAndLeisureFacilities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnExtraMuralAndLeisureFacilities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnFinancialSupport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnFinancialSupport">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnInsurance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnInsurance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnInternationalProgrammes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnInternationalProgrammes">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnInternships -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnInternships">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnLanguageCourses -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnLanguageCourses">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnMeals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnMeals">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnMedicalFacilities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnMedicalFacilities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnSportsFacilities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnSportsFacilities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnStudentAffairsOffice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnStudentAffairsOffice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnStudentAssociations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnStudentAssociations">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnStudyFacilities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationOnStudyFacilities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#GeneralInformationForStudents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionAcademicAuthorities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionAcademicAuthorities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionAcademicCalendar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionAcademicCalendar">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionAdmissionProcedures -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionAdmissionProcedures">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionGeneralDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionGeneralDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionMainUniversityRegulations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionMainUniversityRegulations">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#Lecturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#Lecturer">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
 </rdf:RDF>
 
 
