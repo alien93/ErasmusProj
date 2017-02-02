@@ -1,12 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.ftn.uns.ac.rs/student.owl#"
-     xml:base="http://www.ftn.uns.ac.rs/student.owl"
+<rdf:RDF xmlns="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#"
+     xml:base="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.ftn.uns.ac.rs/student.owl"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student">
+        <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
     
 
 
@@ -21,85 +28,103 @@
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#applyToProgram -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasDiploma -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#applyToProgram">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Program"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasDiploma">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Diploma"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#applyToUniversity -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasIdentificationDocument -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#applyToUniversity">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#University"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasIdentificationDocument">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IDCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Passport"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hasDiploma -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasLanguageProficiency -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasDiploma">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Diploma"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasLanguageProficiency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LanguageProficiency"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hasID -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasMarks -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasID">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasMarks">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Marks"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hasLanguageProficiency -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasMotivationLetter -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasLanguageProficiency">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#LanguageProficiency"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasMotivationLetter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#MotivationLetter"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hasMarks -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasRecommendationLetter -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasMarks">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Marks"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasRecommendationLetter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#RecommendationLetter"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hasMotivationLetter -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasResidenceCertificate -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasMotivationLetter">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#MotivationLetter"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#hasResidenceCertificate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#ResidenceCertificate"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hasRecommendationLetter -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#issuedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hasRecommendationLetter">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#RecommendationLetter"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#issuedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LanguageProficiency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#ResidenceCertificate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#UniversityDocument"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#hesResidenceCertificate -->
+    <!-- http://www.w3.org/2006/vcard/ns#hasAddress -->
 
-    <owl:ObjectProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#hesResidenceCertificate">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ResidenceCertificate"/>
-    </owl:ObjectProperty>
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasTelephone -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Cell"/>
+    </rdf:Description>
     
 
 
@@ -114,148 +139,77 @@
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#address -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#address -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#address">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#address">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#citizenship -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#citizenship -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#citizenship">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#citizenship">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#city -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#city -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#city">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#city">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#country_of_birth -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#countryOfBirth -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#country_of_birth">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#countryOfBirth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#date_of_birth -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#expiringDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#date_of_birth">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#expiringDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#email -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#issueDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#email">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#issueDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LanguageProficiency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#ResidenceCertificate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#UniversityDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#expiring_date -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#number -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#expiring_date">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#first_name -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#zipCode -->
 
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#first_name">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#gender -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#gender">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#issue_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#issue_date">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Diploma"/>
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#issued_by -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#issued_by">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#last_name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#last_name">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#mobile_phone_number -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#mobile_phone_number">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Student"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#number -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#number">
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#ID"/>
-        <rdfs:domain rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Passport"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#telephone -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#telephone">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#zip_code -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ftn.uns.ac.rs/student.owl#zip_code">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#zipCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
     </owl:DatatypeProperty>
     
 
@@ -271,91 +225,99 @@
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#Diploma -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Diploma -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Diploma">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Diploma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#UniversityDocument"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#Document -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IDCard -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Document"/>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#ID -->
-
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#ID">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IDCard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#LanguageProficiency -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#LanguageProficiency">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#Marks -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LanguageProficiency -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Marks">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LanguageProficiency">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#MotivationLetter -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LetterType -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#MotivationLetter">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LetterType">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#Passport -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Marks -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Passport">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Marks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#UniversityDocument"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#Program -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#MotivationLetter -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Program"/>
-    
-
-
-    <!-- http://www.ftn.uns.ac.rs/student.owl#RecommendationLetter -->
-
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#RecommendationLetter">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#MotivationLetter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LetterType"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#ResidenceCertificate -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Passport -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#ResidenceCertificate">
-        <rdfs:subClassOf rdf:resource="http://www.ftn.uns.ac.rs/student.owl#Document"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Passport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
     </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#Student -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#RecommendationLetter -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#Student"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#RecommendationLetter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#LetterType"/>
+    </owl:Class>
     
 
 
-    <!-- http://www.ftn.uns.ac.rs/student.owl#University -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#ResidenceCertificate -->
 
-    <owl:Class rdf:about="http://www.ftn.uns.ac.rs/student.owl#University"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#ResidenceCertificate">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#Student">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#UniversityDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#UniversityDocument">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </owl:Class>
 </rdf:RDF>
 
 
