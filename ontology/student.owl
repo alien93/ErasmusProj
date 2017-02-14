@@ -139,11 +139,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#address -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#birthday -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#address">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#birthday">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/birthday"/>
     </owl:DatatypeProperty>
     
 
@@ -161,7 +160,14 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#city">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#country">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
     </owl:DatatypeProperty>
     
 
@@ -170,8 +176,13 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#countryOfBirth">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#email"/>
     
 
 
@@ -180,6 +191,22 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#expiringDate">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#IdentificationDocument"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#firstName">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#gender">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/gender"/>
     </owl:DatatypeProperty>
     
 
@@ -205,12 +232,41 @@
     
 
 
-    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#zipCode -->
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#placeOfBirth -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#zipCode">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#placeOfBirth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#postalCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#streetAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#surname">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#telephone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/banevezilic/ontologies/2017/0/student#telephone"/>
     
 
 
